@@ -1,0 +1,41 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Claude / AI agents
+.claude/
+agents/
+.agents/
+skills-lock.json
+PLAN.md
+plan.md
+
+# Test artifacts
+screenshot-*.png
+test-browser*.js
+
+# Environment
+.env
+.env.*
+package-lock.json
+yarn.lock

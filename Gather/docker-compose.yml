@@ -1,0 +1,41 @@
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+    volumes:
+      - type: bind
+        source: ./server
+        target: /app
+      - type: volume
+        source: server_node_modules
+        target: /app/node_modules
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+    environment:
+      VITE_SERVER_URL: http://localhost:3001
+      CHOKIDAR_USEPOLLING: "true"
+    command: npx vite --host
+    volumes:
+      - type: bind
+        source: ./client
+        target: /app
+      - type: volume
+        source: client_node_modules
+        target: /app/node_modules
+
+volumes:
+  server_node_modules:
+  client_node_modules:

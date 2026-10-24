@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gather Town Clone - Virtual workspace platform" />
+    <title>Gather Town Clone</title>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <script>
+      // CRITICAL: Set module global BEFORE any code loads
+      if (typeof module === "undefined") {
+        window.module = { exports: {} };
+        globalThis.module = window.module;
+      }
+      
+      window.addEventListener('error', function(event) { console.error('GLOBAL_ERROR:', event.error || event.message); });
+      window.addEventListener('unhandledrejection', function(event) { console.error('UNHANDLED_REJECTION:', event.reason); });
+      console.log('DEBUG: Error listeners attached');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

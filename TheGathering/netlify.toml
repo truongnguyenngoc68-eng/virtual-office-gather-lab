@@ -1,0 +1,10 @@
+# Netlify config for The Gathering (Vite SPA)
+[build]
+  publish = "dist"
+  command = "pnpm run build"
+
+# SPA: tất cả route trả về index.html (fix 404 khi share link /lobby?room=xxx)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

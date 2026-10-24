@@ -1,0 +1,3 @@
+# SPA fallback: mọi path đều serve index.html để React Router xử lý
+# Fix 404 khi mở link mời phòng: /lobby?room=xxx
+/*    /index.html   200

@@ -1,0 +1,17 @@
+# Dependencies & Build Artifacts
+**/node_modules/
+**/dist/
+**/.next/
+tools/
+*.zip
+*.log
+
+# Nested upstream git backups (so full source is tracked in monorepo)
+**/.git-upstream-bak/
+
+# Environment & OS
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
